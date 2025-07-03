@@ -1,0 +1,140 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f9f9f9, #e0f7fa);
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00796b;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Reusable Card Style */
+.contact-form, .todo-app {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover, .todo-app:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 121, 107, 0.3);
+}
+
+.contact-form h2,
+.todo-app h2 {
+  margin-bottom: 20px;
+  color: #004d40;
+}
+
+.contact-form input,
+.contact-form textarea,
+.todo-app input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.todo-app input:focus {
+  border-color: #00acc1;
+  box-shadow: 0 0 5px rgba(0,188,212,0.3);
+  outline: none;
+}
+
+.contact-form button,
+.todo-app button {
+  padding: 10px 20px;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-app button {
+  margin-left: 10px;
+  background: #0097a7;
+}
+
+.contact-form button:hover,
+.todo-app button:hover {
+  background: #004d40;
+  box-shadow: 0 5px 15px rgba(0, 121, 107, 0.3);
+  transform: scale(1.05);
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+li {
+  background: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+li:hover {
+  background: #e0f7fa;
+}
+
+.remove-btn {
+  background: #e53935;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #c62828;
+}
+
+@media(max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
