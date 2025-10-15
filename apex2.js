@@ -22,7 +22,7 @@ function validateForm() {
         return;
       }
 
-      const li = document.createElement("li");
+     // const li = document.createElement("li");
       li.textContent = task;
 
       const btn = document.createElement("button");
@@ -35,4 +35,5 @@ function validateForm() {
       li.appendChild(btn);
       document.getElementById("todoList").appendChild(li);
       input.value = "";
+
     }
